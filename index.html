@@ -15,7 +15,7 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MCJS - 网页版MC最佳中文版 - 官方网站 - syz71.github.io/mcjs.link</title>
+  <title>MCJS - 网页版MC最佳中文版 - 官方网站 - MCJS.Link</title>
   <meta name="description" content="在浏览器里玩MC" />
   <meta name="keywords" content="WebMC, MCJS, eaglercraft, eaglercraftx, minecraft" />
   <meta property="og:locale" content="zh-CN" />
@@ -34,13 +34,13 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
     }
 
     :root {
-      --bg: rgba(255, 255, 255, 0);
-      --panel: rgba(255, 255, 255, 0.4);
-      --panel-border: rgb(230, 230, 230);
+      --bg: rgb(240, 240, 240);
+      --panel: rgba(255, 255, 255, 0.5);
+      --panel-border: rgb(220, 220, 220);
       --muted: #6b6b6b;
       --accent: #22a84a;
       --accent-contrast: #0f6b2d;
-      --chip-bg: #f1f5f9;
+      --chip-bg: rgb(230, 230, 230);
       --text: #111;
       --gap: 20px;
       font-family: "Oxanium", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Microsoft Yahei", Arial;
@@ -54,26 +54,10 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
       color: var(--text);
     }
 
-    .bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -999;
-      background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.8)), url('background.jpg');
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      will-change: transform;
-      transform: translateZ(0);
-    }
-
-
     hr {
       border: 0;
       height: 1px;
-      background-color: #f0f0f0;
+      background-color: var(--panel-border);
       margin: 20px 0;
     }
 
@@ -105,7 +89,7 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
     .hero h1 {
       color: var(--accent);
       margin: 0;
-      line-height: 70px;
+      line-height: 52px;
       font-size: 72px
     }
 
@@ -129,7 +113,7 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: var(--gap)
     }
 
@@ -180,7 +164,7 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
     .ver {
       font-size: 12px;
       color: var(--muted);
-      margin-bottom: 10px
+      margin-bottom: 4px
     }
 
     .features {
@@ -313,7 +297,6 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
       color: var(--muted);
       line-height: 150%;
       font-size: 12px;
-      border-top: 1px solid #f3f3f3
     }
 
     .hl {
@@ -408,64 +391,53 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
       color: #777;
       font-size: 12px;
     }
+
+    .ribbon {
+      width: 84px;
+      height: 24px;
+      background-color: var(--accent);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      letter-spacing: 1px;
+      clip-path: polygon(0% 0%, 100% 0%, 92% 50%, 100% 100%, 0% 100%, 8% 50%);
+    }
   </style>
 
 </head>
-<div class="bg" id="bg"></div>
 
-<body class="img-bg">
+<body>
   <div class="wrap">
     <section class="hero">
       <h1>MCJS</h1>
-      <h3>MC in JavaScript - syz71.github.io/mcjs.link</h3>
+      <center>
+        <div class="ribbon">四周年</div>
+      </center>
+      <h3>MC in JavaScript - MCJS.Link</h3>
       <h2>无需下载, 直接在浏览器里玩 MC !</h2>
       <h3>Eaglercraft 最佳简体中文翻译版</h3>
       <h3>Eaglercraft 所有版本最全整合网站</h3>
-      <p>免费|无广告|无需下载|全设备支持|中文优化<br>多版本|材质包|光影包|模组整合包|远程联机<br><strong>本网站仅为公益镜像站，非官方网站</strong></p>
-      <a href="https://github.com/mcjsteam/discuss/issues">
-        <img alt="GitHub Issues"
-          src="https://img.shields.io/github/issues/mcjsteam/discuss?style=flat-square&color=blue&logo=github&logoColor=white"></a>
-      <a href="#announcement">
-        <img alt="Static Badge"
-          src="https://img.shields.io/badge/%E8%BF%91%E6%9C%9F-%E5%85%AC%E5%91%8A-orange?style=flat-square&logo=gitbook&logoColor=white"></a>
-      <a style="cursor: pointer;" onclick="changebg()">
-        <img alt="Static Badge"
-          src="https://img.shields.io/badge/%E5%88%87%E6%8D%A2-%E8%83%8C%E6%99%AF-green?style=flat-square&logo=cinnamon&logoColor=white"></a>
+      <p>免费|无广告|无需下载|全设备支持|中文优化<br>多版本|材质包|光影包|模组整合包|远程联机<br><strong>认准 MCJS.Link , 拒绝假冒网站</strong></p>
     </section>
-    <!--
-    <div class="hl">
-      <section class="hero2">
-        <h2>已新增 20 多个版本客户端！</h2>
-        快捷跳转：<br>
-        <a href="#release">正式版（1.8.8 - 1.12.2）</a><br>
-        <a href="#beta">高版本测试版（1.12.2 - 26.2）</a><br>
-        <a href="#modpack">模组整合包（1.6.4 Forge）</a><br>
-        <a href="#legacy">旧版（Alpha - beta - 1.6.4）</a><br>
-        <a href="#thirdparty">第三方版（PixelClient, TuffClient）</a>
-      </section>
-    </div>-->
-    <!-- <section class="doc" style="padding-top: 2px;padding-bottom: 0px;">
-      <p style="color: black;">
-        <strong>注意：</strong>MCJS 远程联机服务遭受网络攻击导致故障，正在紧急修复中，用户请暂时使用其它中继服务器，以保障局域网联机不受影响
-      </p>
-    </section> -->
     <hr id="release">
     <p class="pp">MCJS 优化正式版 Eaglercraft 客户端</p>
-    <p class="ppp">发展最早，最稳定且性能最好的版本，由 MCJS 完美支持中文翻译和远程联机功能<br><strong>为了更好的游戏体验，建议尽可能选择 WASM 版，以获得比 JS 版更强的性能</strong></p>
+    <p class="ppp">发展最早，最稳定且性能最好的版本，由 MCJS 完美支持中文翻译和远程联机功能<br><strong>为了更好的游戏体验，建议尽可能选择 WASM 版，以获得比 JS 版更强的性能</strong>
+    </p>
     <main class="grid" aria-label="版本列表">
       <div class="card">
         <div>
           <span class="chip1">推荐</span>
           <h3>EaglercraftX 1.8.8</h3>
-          <div class="ver" style="margin-bottom: 4px;">原始版本: MC Java Edition 1.8.8<br>构建版本: u53 ultimate (JavaScript)
+          <div class="ver">原始版本: MC Java Edition 1.8.8<br>构建版本: u53 ultimate (JavaScript)
           </div>
           <div class="ver">原作者: lax1dude<br>翻译: MCJS</div>
           <div class="features">
-            🌏语言：<span style="font-weight: bold;color: var(--accent);">简体中文</span>(完整翻译)、英文<br>
-            💻性能：高<br>
-            🎮设备：<span style="font-weight: bold;color: var(--accent);">手机触屏操作</span>、电脑键鼠操作<br>
-            🔗联机：<span style="font-weight: bold;color: var(--accent);">远程联机</span>、单机、局域网<br>
-            📂资源：<span style="font-weight: bold;color: var(--accent);">内置光影包</span>、自定义材质包
+            ✅ 简体中文<br>
+            ✅ 触摸屏操作<br>
+            ✅ 远程联机<br>
+            ✅ 光影<br>
           </div>
         </div>
         <div style="display:flex;gap:8px">
@@ -479,14 +451,13 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
           <span class="chip1">推荐</span>
           <span class="chip2">高性能</span>
           <h3>EaglercraftX 1.8.8 <span style="font-size: 12px;">WASM</span></h3>
-          <div class="ver" style="margin-bottom: 4px;">原始版本: MC Java Edition 1.8.8<br>构建版本: u53 ultimate (WASM-GC)</div>
+          <div class="ver">原始版本: MC Java Edition 1.8.8<br>构建版本: u53 ultimate (WASM-GC)</div>
           <div class="ver">原作者: lax1dude<br>翻译: MCJS</div>
           <div class="features">
-            🌏语言：<span style="font-weight: bold;color: var(--accent);">简体中文</span>(完整翻译)、英文<br>
-            💻性能：<span style="font-weight: bold;color: var(--accent);">极高</span><br>
-            🎮设备：<span style="font-weight: bold;color: var(--accent);">手机触屏操作</span>、电脑键鼠操作<br>
-            🔗联机：<span style="font-weight: bold;color: var(--accent);">远程联机</span>、单机、局域网<br>
-            📂资源：<span style="font-weight: bold;color: var(--accent);">内置光影包</span>、自定义材质包
+            ✅ 简体中文<br>
+            ✅ 触摸屏操作<br>
+            ✅ 远程联机<br>
+            ✅ 光影<br>
           </div>
         </div>
         <div style="display:flex;gap:8px">
@@ -499,14 +470,11 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
         <div>
           <span class="chip1">推荐</span>
           <h3>Eaglercraft 1.12.2</h3>
-          <div class="ver" style="margin-bottom: 4px;">原始版本: MC Java Edition 1.12.2<br>构建版本: u3 (JavaScript)</div>
+          <div class="ver">原始版本: MC Java Edition 1.12.2<br>构建版本: u3 (JavaScript)</div>
           <div class="ver">原作者: PeytonPlayz585<br>翻译: MCJS</div>
           <div class="features">
-            🌏语言：<span style="font-weight: bold;color: var(--accent);">简体中文</span>(完整翻译)<br>
-            💻性能：高<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：<span style="font-weight: bold;color: var(--accent);">远程联机</span>、单机、局域网<br>
-            📂资源：自定义材质包
+            ✅ 简体中文<br>
+            ✅ 远程联机<br>
           </div>
         </div>
         <div style="display:flex;gap:8px">
@@ -520,14 +488,11 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
           <span class="chip1">推荐</span>
           <span class="chip2">高性能</span>
           <h3>Eaglercraft 1.12.2 <span style="font-size: 12px;">WASM</span></h3>
-          <div class="ver" style="margin-bottom: 4px;">原始版本: MC Java Edition 1.12.2<br>构建版本: u3 (WASM-GC)</div>
+          <div class="ver">原始版本: MC Java Edition 1.12.2<br>构建版本: u3 (WASM-GC)</div>
           <div class="ver">原作者: PeytonPlayz585<br>翻译: MCJS</div>
           <div class="features">
-            🌏语言：<span style="font-weight: bold;color: var(--accent);">简体中文</span>(完整翻译)<br>
-            💻性能：<span style="font-weight: bold;color: var(--accent);">极高</span><br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：<span style="font-weight: bold;color: var(--accent);">远程联机</span>、单机、局域网<br>
-            📂资源：自定义材质包
+            ✅ 简体中文<br>
+            ✅ 远程联机<br>
           </div>
         </div>
         <div style="display:flex;gap:8px">
@@ -536,8 +501,6 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
         </div>
       </div>
     </main>
-
-
     <hr id="beta">
     <p class="pp">最新测试版高版本 Eaglercraft 客户端</p>
     <p class="ppp">提前体验最新版本 (1.13+ 高版本)，测试版不稳定且 bug 多，仅测试体验<br><strong>高版本对设备性能要求高，故只有 WASM
@@ -548,18 +511,15 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
         <div>
           <span class="chip">测试版</span>
           <h3>Eaglercraft 1.13.2 <span style="font-size: 12px;">WASM</span></h3>
-          <div class="ver" style="margin-bottom: 4px;">原始版本: MC Java Edition 1.13.2<br>构建版本: u1</div>
+          <div class="ver">原始版本: MC Java Edition 1.13.2<br>构建版本: u1</div>
           <div class="ver">原作者: arlen<br>翻译: Enchantment-Niko</div>
           <div class="features">
-            🌏语言：<span style="font-weight: bold;color: var(--accent);">简体中文</span>、英文<br>
-            💻性能：中<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：<span style="font-weight: bold;color: var(--accent);">远程联机</span>、单机、局域网<br>
-            📂资源：自定义材质包
+            ✅ 简体中文<br>
+            ✅ 远程联机<br>
           </div>
         </div>
         <div style="display:flex;gap:8px">
-          <a class="btn" onclick="openModal2('1.13.2')">开始游戏</a>
+          <a class="btn" onclick="openModal2('1.13.2','https://mcjs-r2.pages.dev/assets/game.html?ver=1.13.2')">开始游戏</a>
           <p class="siz">约40MB</p>
         </div>
       </div>
@@ -567,37 +527,47 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
         <div>
           <span class="chip">测试版</span>
           <h3>Eaglercraft 1.14.4 <span style="font-size: 12px;">WASM</span></h3>
-          <div class="ver" style="margin-bottom: 4px;">原始版本: MC Java Edition 1.14.4<br>构建版本: u1 (已停更)</div>
-          <div class="ver">原作者: eymenwsmc<br>翻译: eymenwsmc</div>
+          <div class="ver">原始版本: MC Java Edition 1.14.4<br>构建版本: u1 (已停更)</div>
+          <div class="ver">原作者: eymenwsmc<br>原版全语言翻译</div>
           <div class="features">
-            🌏语言：<span style="font-weight: bold;color: var(--accent);">简体中文</span>、英文<br>
-            💻性能：<span style="font-weight: bold;color: brown;">低</span>(建议使用高性能的电脑)<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：<span style="font-weight: bold;color: var(--accent);">远程联机</span>、单机、局域网<br>
-            📂资源：自定义材质包
+            ✅ 简体中文<br>
+            ✅ 远程联机<br>
           </div>
         </div>
         <div style="display:flex;gap:8px">
-          <a class="btn" onclick="openModal2('1.14.4')">开始游戏</a>
+          <a class="btn" onclick="openModal2('1.14.4','https://mcjs-r2.pages.dev/assets/game.html?ver=1.14.4')">开始游戏</a>
           <p class="siz">约25MB</p>
         </div>
       </div>
       <div class="card">
         <div>
           <span class="chip">测试版</span>
-          <h3>Eaglercraft 1.16.5 <span style="font-size: 12px;">WASM</span></h3>
-          <div class="ver" style="margin-bottom: 4px;">原始版本: MC Java Edition 1.16.5<br>构建版本: u3</div>
-          <div class="ver">原作者: AcornDev<br>翻译: Enchantment-Niko</div>
+          <h3>Eaglercraft 1.15.2 <span style="font-size: 12px;">WASM</span></h3>
+          <div class="ver">原始版本: MC Java Edition 1.15.2<br>构建版本: u1</div>
+          <div class="ver">原作者: nuraad<br>原版全语言翻译</div>
           <div class="features">
-            🌏语言：<span style="font-weight: bold;color: var(--accent);">简体中文</span>、英文<br>
-            💻性能：<span style="font-weight: bold;color: brown;">低</span>(建议使用高性能的电脑)<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：<span style="font-weight: bold;color: var(--accent);">远程联机</span>、单机、局域网<br>
-            📂资源：自定义材质包
+            ✅ 简体中文<br>
+            ✅ 远程联机<br>
           </div>
         </div>
         <div style="display:flex;gap:8px">
-          <a class="btn" onclick="openModal2('1.16.5')">开始游戏</a>
+          <a class="btn" onclick="openModal2('1.15.2','https://mcjs-r2.pages.dev/assets/game.html?ver=1.15.2')">开始游戏</a>
+          <p class="siz">约35MB</p>
+        </div>
+      </div>
+      <div class="card">
+        <div>
+          <span class="chip">测试版</span>
+          <h3>Eaglercraft 1.16.5 <span style="font-size: 12px;">WASM</span></h3>
+          <div class="ver">原始版本: MC Java Edition 1.16.5<br>构建版本: u3</div>
+          <div class="ver">原作者: AcornDev<br>翻译: Enchantment-Niko</div>
+          <div class="features">
+            ✅ 简体中文<br>
+            ✅ 远程联机<br>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px">
+          <a class="btn" onclick="openModal2('1.16.5','https://mcjs-r2.pages.dev/assets/game.html?ver=1.16.5')">开始游戏</a>
           <p class="siz">约35MB</p>
         </div>
       </div>
@@ -605,18 +575,30 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
         <div>
           <span class="chip">测试版</span>
           <h3>Eaglercraft 1.20.6 <span style="font-size: 12px;">WASM</span></h3>
-          <div class="ver" style="margin-bottom: 4px;">原始版本: MC Java Edition 1.20.6<br>构建版本: Beta 0.1 (已停更)</div>
+          <div class="ver">原始版本: MC Java Edition 1.20.6<br>构建版本: beta 0.1 (已停更)</div>
           <div class="ver">原作者: eymenwsmc<br>翻译: Enchantment-Niko</div>
           <div class="features">
-            🌏语言：<span style="font-weight: bold;color: var(--accent);">简体中文</span>、英文<br>
-            💻性能：<span style="font-weight: bold;color: brown;">低</span>(建议使用高性能的电脑)<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：<span style="font-weight: bold;color: var(--accent);">远程联机</span>、单机、局域网<br>
-            📂资源：自定义材质包
+            ✅ 简体中文<br>
+            ✅ 远程联机<br>
           </div>
         </div>
         <div style="display:flex;gap:8px">
-          <a class="btn" onclick="openModal2('1.20.6')">开始游戏</a>
+          <a class="btn" onclick="openModal2('1.20.6','https://mcjs-r2.pages.dev/assets/game.html?ver=1.20.6')">开始游戏</a>
+          <p class="siz">约40MB</p>
+        </div>
+      </div>
+      <div class="card">
+        <div>
+          <span class="chip">测试版</span>
+          <h3>Eaglercraft 1.21.11 <span style="font-size: 12px;">WASM</span></h3>
+          <div class="ver">原始版本: MC Java Edition 1.21.11<br>构建版本: u1 beta</div>
+          <div class="ver">原作者: Syntaxsavy<br>暂无翻译</div>
+          <div class="features">
+            ✅ 远程联机<br>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px">
+          <a class="btn" onclick="openModal2('1.21.11','https://mcjs-r2.pages.dev/assets/game.html?ver=1.21.11')">开始游戏</a>
           <p class="siz">约40MB</p>
         </div>
       </div>
@@ -625,19 +607,17 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
           <span class="chip1">推荐</span>
           <span class="chip">测试版</span>
           <h3>Eaglercraft 26.2 <span style="font-size: 12px;">WASM</span></h3>
-          <div class="ver" style="margin-bottom: 4px;">原始版本: MC Java Edition 26.2<br>构建版本: u1</div>
+          <div class="ver">原始版本: MC Java Edition 26.2<br>构建版本: u2</div>
           <div class="ver">原作者: o_xer<br>翻译: Enchantment-Niko, o_xer</div>
           <div class="features">
-            🌏语言：<span style="font-weight: bold;color: var(--accent);">简体中文</span>、英文<br>
-            💻性能：<span style="font-weight: bold;color: brown;">低</span>(建议使用高性能的电脑)<br>
-            🎮设备：<span style="font-weight: bold;color: var(--accent);">手机触屏操作</span>、电脑键鼠操作<br>
-            🔗联机：<span style="font-weight: bold;color: var(--accent);">远程联机</span>、单机、局域网<br>
-            📂资源：自定义材质包
+            ✅ 简体中文<br>
+            ✅ 触摸屏操作<br>
+            ✅ 远程联机<br>
           </div>
         </div>
         <div style="display:flex;gap:8px">
-          <a class="btn" onclick="openModal2('26.2')">开始游戏</a>
-          <p class="siz">72.1MB</p>
+          <a class="btn" onclick="openModal2('26.2','https://mcjs-r2.pages.dev/r2/26.2.html')">开始游戏</a>
+          <p class="siz">约70MB</p>
         </div>
       </div>
       <div class="card">
@@ -645,19 +625,17 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
           <span class="chip1">推荐</span>
           <span class="chip">测试版</span>
           <h3>Eaglercraft 26.3 <span style="font-size: 12px;">WASM</span></h3>
-          <div class="ver" style="margin-bottom: 4px;">原始版本: MC Java Edition 26.3<br>构建版本: Fixed (26.2+数据包)</div>
-          <div class="ver">原作者: Joey-JM, o_xer<br>翻译: Enchantment-Niko, o_xer</div>
+          <div class="ver">原始版本: MC Java Edition 26.3<br>构建版本: u1</div>
+          <div class="ver">原作者: hatrix<br>翻译: Enchantment-Niko, o_xer</div>
           <div class="features">
-            🌏语言：<span style="font-weight: bold;color: var(--accent);">简体中文</span>、英文<br>
-            💻性能：<span style="font-weight: bold;color: brown;">低</span>(建议使用高性能的电脑)<br>
-            🎮设备：<span style="font-weight: bold;color: var(--accent);">手机触屏操作</span>、电脑键鼠操作<br>
-            🔗联机：<span style="font-weight: bold;color: var(--accent);">远程联机</span>、单机、局域网<br>
-            📂资源：自定义材质包
+            ✅ 简体中文<br>
+            ✅ 触摸屏操作<br>
+            ✅ 远程联机<br>
           </div>
         </div>
         <div style="display:flex;gap:8px">
-          <a class="btn" onclick="openModal2('26.3')">开始游戏</a>
-          <p class="siz">83.4MB</p>
+          <a class="btn" onclick="openModal2('26.3','https://mcjs-r2.pages.dev/r2/26.3.html')">开始游戏</a>
+          <p class="siz">约75MB</p>
         </div>
       </div>
     </main>
@@ -668,14 +646,12 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
       <div class="card">
         <div>
           <span class="chip">测试版</span>
-          <h3>Eaglercraft 1.6.4 Forge<br>"Lite" Modpack <span style="font-size: 12px;">WASM</span></h3>
-          <div class="ver">原始版本: MC Java Edition 1.6.4 Forge<br>构建版本: release<br>原作者: lax1dude</div>
+          <h3>Eaglercraft 1.6.4 Forge<br><span style="font-size: 16px;">"Lite" Modpack</span> <span
+              style="font-size: 12px;">WASM</span></h3>
+          <div class="ver">原始版本: MC Java Edition 1.6.4 Forge<br>构建版本: release</div>
+          <div class="ver">原作者: lax1dude<br>暂无翻译</div>
           <div class="features">
-            🌏语言：仅英文原版<br>
-            💻性能：较低<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：<span style="font-weight: bold;color: var(--accent);">远程联机</span>、单机、局域网<br>
-            📂资源：<span style="font-weight: bold;color: var(--accent);">内置模组包</span>、自定义材质包
+            ✅ 内置“轻量版”模组整合包<br>
           </div>
         </div>
         <div style="display:flex;gap:8px">
@@ -686,14 +662,12 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
       <div class="card">
         <div>
           <span class="chip">测试版</span>
-          <h3>Eaglercraft 1.6.4 Forge<br>"Tech" Modpack <span style="font-size: 12px;">WASM</span></h3>
-          <div class="ver">原始版本: MC Java Edition 1.6.4 Forge<br>构建版本: release<br>原作者: lax1dude</div>
+          <h3>Eaglercraft 1.6.4 Forge<br><span style="font-size: 16px;">"Tech" Modpack</span> <span
+              style="font-size: 12px;">WASM</span></h3>
+          <div class="ver">原始版本: MC Java Edition 1.6.4 Forge<br>构建版本: release</div>
+          <div class="ver">原作者: lax1dude<br>暂无翻译</div>
           <div class="features">
-            🌏语言：仅英文原版<br>
-            💻性能：<span style="font-weight: bold;color: brown;">低</span>(建议使用高性能的电脑)<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：<span style="font-weight: bold;color: var(--accent);">远程联机</span>、单机、局域网<br>
-            📂资源：<span style="font-weight: bold;color: var(--accent);">内置模组包</span>、自定义材质包
+            ✅ 内置“科技”模组整合包<br>
           </div>
         </div>
         <div style="display:flex;gap:8px">
@@ -704,15 +678,13 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
       <div class="card">
         <div>
           <span class="chip">测试版</span>
-          <h3>Eaglercraft 1.6.4 Forge<br>"Skyfactory" Modpack <span style="font-size: 12px;">WASM</span>
+          <h3>Eaglercraft 1.6.4 Forge<br><span style="font-size: 16px;">"Skyfactory" Modpack</span> <span
+              style="font-size: 12px;">WASM</span>
           </h3>
-          <div class="ver">原始版本: MC Java Edition 1.6.4 Forge<br>构建版本: release<br>原作者: lax1dude</div>
+          <div class="ver">原始版本: MC Java Edition 1.6.4 Forge<br>构建版本: release</div>
+          <div class="ver">原作者: lax1dude<br>暂无翻译</div>
           <div class="features">
-            🌏语言：仅英文原版<br>
-            💻性能：<span style="font-weight: bold;color: brown;">低</span>(建议使用高性能的电脑)<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：<span style="font-weight: bold;color: var(--accent);">远程联机</span>、单机、局域网<br>
-            📂资源：<span style="font-weight: bold;color: var(--accent);">内置模组包</span>、自定义材质包
+            ✅ 内置“天空工厂”模组整合包<br>
           </div>
         </div>
         <div style="display:flex;gap:8px">
@@ -723,14 +695,12 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
       <div class="card">
         <div>
           <span class="chip">测试版</span>
-          <h3>Eaglercraft 1.6.4 Forge<br>"Magic" Modpack <span style="font-size: 12px;">WASM</span></h3>
-          <div class="ver">原始版本: MC Java Edition 1.6.4 Forge<br>构建版本: release<br>原作者: lax1dude</div>
+          <h3>Eaglercraft 1.6.4 Forge<br><span style="font-size: 16px;">"Magic" Modpack</span> <span
+              style="font-size: 12px;">WASM</span></h3>
+          <div class="ver">原始版本: MC Java Edition 1.6.4 Forge<br>构建版本: release</div>
+          <div class="ver">原作者: lax1dude<br>暂无翻译</div>
           <div class="features">
-            🌏语言：仅英文原版<br>
-            💻性能：<span style="font-weight: bold;color: brown;">低</span>(建议使用高性能的电脑)<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：<span style="font-weight: bold;color: var(--accent);">远程联机</span>、单机、局域网<br>
-            📂资源：<span style="font-weight: bold;color: var(--accent);">内置模组包</span>、自定义材质包
+            ✅ 内置“魔法”模组整合包<br>
           </div>
         </div>
         <div style="display:flex;gap:8px">
@@ -747,11 +717,9 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
         <div>
           <span class="chip">旧版</span>
           <h3>Eaglercraft 1.6.4</h3>
-          <div class="ver">原始版本: MC Java Edition 1.6.4<br>构建版本: release<br>原作者: Catfoolyou</div>
+          <div class="ver">原始版本: MC Java Edition 1.6.4<br>构建版本: release</div>
+          <div class="ver">原作者: Catfoolyou<br>暂无翻译</div>
           <div class="features">
-            🌏语言：仅英文原版<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：仅单机游戏
           </div>
         </div>
         <div style="display:flex;gap:8px">
@@ -763,11 +731,9 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
         <div>
           <span class="chip">旧版</span>
           <h3>Eaglercraft 1.5.2</h3>
-          <div class="ver">原始版本: MC Java Edition 1.5.2<br>构建版本: SP2<br>原作者: lax1dude, ayunami2000</div>
+          <div class="ver">原始版本: MC Java Edition 1.5.2<br>构建版本: SP2</div>
+          <div class="ver">原作者: lax1dude, ayunami2000<br>暂无翻译</div>
           <div class="features">
-            🌏语言：仅英文原版<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：仅单机游戏
           </div>
         </div>
         <div style="display:flex;gap:8px">
@@ -779,11 +745,9 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
         <div>
           <span class="chip">旧版</span>
           <h3>Eaglercraft 1.2.5</h3>
-          <div class="ver">原始版本: MC Java Edition 1.2.5<br>构建版本: release<br>原作者: Colbster937</div>
+          <div class="ver">原始版本: MC Java Edition 1.2.5<br>构建版本: release</div>
+          <div class="ver">原作者: Colbster937<br>暂无翻译</div>
           <div class="features">
-            🌏语言：仅英文原版<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：仅单机游戏
           </div>
         </div>
         <div style="display:flex;gap:8px">
@@ -795,11 +759,9 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
         <div>
           <span class="chip">旧版</span>
           <h3>Eaglercraft Beta 1.7.3</h3>
-          <div class="ver">原始版本: MC Java Edition Beta 1.7.3<br>构建版本: release<br>原作者: lax1dude</div>
+          <div class="ver">原始版本: MC Java Edition Beta 1.7.3<br>构建版本: release</div>
+          <div class="ver">原作者: lax1dude<br>暂无翻译</div>
           <div class="features">
-            🌏语言：仅英文原版<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：仅单机游戏
           </div>
         </div>
         <div style="display:flex;gap:8px">
@@ -811,11 +773,9 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
         <div>
           <span class="chip">旧版</span>
           <h3>Eaglercraft Beta 1.3</h3>
-          <div class="ver">原始版本: MC Java Edition Beta 1.3<br>构建版本: release<br>原作者: lax1dude</div>
+          <div class="ver">原始版本: MC Java Edition Beta 1.3<br>构建版本: release<br></div>
+          <div class="ver">原作者: lax1dude<br>暂无翻译</div>
           <div class="features">
-            🌏语言：仅英文原版<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：仅单机游戏
           </div>
         </div>
         <div style="display:flex;gap:8px">
@@ -827,11 +787,9 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
         <div>
           <span class="chip">旧版</span>
           <h3>Eaglercraft Alpha 1.2.6</h3>
-          <div class="ver">原始版本: MC Java Edition Alpha 1.2.6<br>构建版本: release<br>原作者: lax1dude</div>
+          <div class="ver">原始版本: MC Java Edition Alpha 1.2.6<br>构建版本: release<br></div>
+          <div class="ver">原作者: lax1dude<br>暂无翻译</div>
           <div class="features">
-            🌏语言：仅英文原版<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：仅单机游戏
           </div>
         </div>
         <div style="display:flex;gap:8px">
@@ -839,181 +797,6 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
           <p class="siz">8.2MB</p>
         </div>
       </div>
-    </main>
-    <hr id="thirdparty">
-    <p class="pp">第三方 Eaglercraft 客户端</p>
-    <p class="ppp">由社区开发的第三方客户端，魔改界面和功能，非官方不受支持，只有英文版</p>
-
-    <main class="grid" aria-label="版本列表">
-      <div class="card">
-        <div>
-          <span class="chip">第三方</span>
-          <h3>PixelClient 1.8.8</h3>
-          <div class="ver">原始版本: MC Java Edition 1.8.8</div>
-          <div class="features">
-            🌏语言：部分翻译中文、英文<br>
-            💻性能：较高<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：单机、局域网、远程联机<br>
-            📂资源：PixelClient 定制主题
-          </div>
-        </div>
-        <div style="display:flex;gap:8px">
-          <a class="btn" onclick="openModal('pixelclient/1.8.8')">开始游戏</a>
-          <p class="siz">18.7MB</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div>
-          <span class="chip">第三方</span>
-          <h3>PixelClient 1.8.8 <span style="font-size: 12px;">WASM</span></h3>
-          <div class="ver">原始版本: MC Java Edition 1.8.8</div>
-          <div class="features">
-            🌏语言：部分翻译中文、英文<br>
-            💻性能：高<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：单机、局域网、远程联机<br>
-            📂资源：PixelClient 定制主题
-          </div>
-        </div>
-        <div style="display:flex;gap:8px">
-          <a class="btn" onclick="openModal('pixelclient/1.8.8wasm')">开始游戏</a>
-          <p class="siz">16.7MB</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div>
-          <span class="chip">第三方</span>
-          <h3>PixelClient 1.12.2</h3>
-          <div class="ver">原始版本: MC Java Edition 1.12.2</div>
-          <div class="features">
-            🌏语言：仅英文原版<br>
-            💻性能：中<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：单机、局域网、远程联机<br>
-            📂资源：PixelClient 定制主题
-          </div>
-        </div>
-        <div style="display:flex;gap:8px">
-          <a class="btn" onclick="openModal('pixelclient/1.12.2')">开始游戏</a>
-          <p class="siz">21.6MB</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div>
-          <span class="chip">第三方</span>
-          <h3>PixelClient 1.12.2 <span style="font-size: 12px;">WASM</span></h3>
-          <div class="ver">原始版本: MC Java Edition 1.12.2</div>
-          <div class="features">
-            🌏语言：仅英文原版<br>
-            💻性能：较高<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：单机、局域网、远程联机<br>
-            📂资源：PixelClient 定制主题
-          </div>
-        </div>
-        <div style="display:flex;gap:8px">
-          <a class="btn" onclick="openModal('pixelclient/1.12.2wasm')">开始游戏</a>
-          <p class="siz">22.5MB</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div>
-          <span class="chip">第三方</span>
-          <h3>TuffClient 1.12.2</h3>
-          <div class="ver">原始版本: MC Java Edition 1.12.2</div>
-          <div class="features">
-            🌏语言：仅英文原版<br>
-            💻性能：中<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：单机、局域网、远程联机<br>
-            📂资源：TuffClient 定制主题
-          </div>
-        </div>
-        <div style="display:flex;gap:8px">
-          <a class="btn" onclick="openModal('tuffclient/1.12.2')">开始游戏</a>
-          <p class="siz">37.2MB</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div>
-          <span class="chip">第三方</span>
-          <h3>TuffClient 1.12.2 <span style="font-size: 12px;">WASM</span></h3>
-          <div class="ver">原始版本: MC Java Edition 1.12.2</div>
-          <div class="features">
-            🌏语言：仅英文原版<br>
-            💻性能：较高<br>
-            🎮设备：仅支持电脑键鼠操作<br>
-            🔗联机：单机、局域网、远程联机<br>
-            📂资源：TuffClient 定制主题
-          </div>
-        </div>
-        <div style="display:flex;gap:8px">
-          <a class="btn" onclick="openModal('tuffclient/1.12.2wasm')">开始游戏</a>
-          <p class="siz">24.3MB</p>
-        </div>
-      </div>
-      <!--
-      <div class="card">
-        <div>
-          <span class="chip">待收录</span>
-          <h3>StarlikeClient 1.8.8</h3>
-          <div class="ver">MC JE 1.8.8 JS Modded</div>
-          <div class="features">
-            由 StarlikeClient 定制的第三方客户端
-          </div>
-        </div>
-        <div style="display:flex;gap:8px">
-          <a class="btno">敬请期待</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div>
-          <span class="chip">待收录</span>
-          <h3>ResentClient 1.8.8</h3>
-          <div class="ver">MC JE 1.8.8 JS Modded</div>
-          <div class="features">
-            由 ResentClient 定制的第三方客户端
-          </div>
-        </div>
-        <div style="display:flex;gap:8px">
-          <a class="btno">敬请期待</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div>
-          <span class="chip">待收录</span>
-          <h3>AstraClient 1.8.8</h3>
-          <div class="ver">MC JE 1.8.8 JS Modded</div>
-          <div class="features">
-            由 AstraClient 定制的第三方客户端
-          </div>
-        </div>
-        <div style="display:flex;gap:8px">
-          <a class="btno">敬请期待</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div>
-          <span class="chip">待收录</span>
-          <h3>AstraClient 1.8.8 <span style="font-size: 12px;">WASM</span></h3>
-          <div class="ver">MC JE 1.8.8 WASM-GC Modded</div>
-          <div class="features">
-            由 AstraClient 定制的第三方客户端
-          </div>
-        </div>
-        <div style="display:flex;gap:8px">
-          <a class="btno">敬请期待</a>
-        </div>
-      </div>-->
     </main>
 
     <hr>
@@ -1043,7 +826,7 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
     </section>
     <section class="doc" id="announcement">
       <h3>简介</h3>
-      <p>在一台临时的电脑上想快速体验 MC ？打开 <a href="https://syz71.github.io/mcjs.link" style="color:green;font-weight: bold;">syz71.github.io/mcjs.link</a> ，不用下载
+      <p>在一台临时的电脑上想快速体验 MC ？打开 <a href="https://mcjs.link" style="color:green;font-weight: bold;">MCJS.Link</a> ，不用下载
         Java/启动器/客户端，不需要繁琐的配置操作，打开网页就能玩！<br>
         <strong>Eaglercraft 介绍：</strong>Eaglercraft 是由 Eaglercraft 开发团队制作的在 Javascript 上运行的网页版 MC ，基于 MCJE 。使用 TeaVM 和
         OpenGL 模拟器来运行与浏览器完全兼容的 Java 虚拟机。Eaglercraft 是众多网页版 MC 开源项目中完成度最高的，支持 MC 的几乎全部特性。<br>
@@ -1055,22 +838,11 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
       </p>
     </section>
     <section class="doc">
-      <h3>最新公告</h3>
-      <p>
-        <strong>MCJS 的官网已由 MCJS.CC 变更为 <a href="https://mcjs.link/https://syz71.github.io/mcjs.link" style="color:green;font-weight: bold;">syz71.github.io/mcjs.link</a>
-          <br>很抱歉旧网站已被拦截导致彻底无法访问了，网站生存不易，维护一个公益的免费项目不易，所以请不要滥用本项目以及不要恶意举报，谢谢。</strong><br>为了您的安全，建议不要从任何搜索引擎搜索 MCJS
-        ，而是直接在浏览器地址栏输入syz71.github.io/mcjs.link<br>
-        请各位玩家相互转告，也可以记住我们的 <a href="https://github.com/mcjsteam/discuss/issues/1"
-          style="color:green;font-weight: bold;">GitHub</a>
-        地址以获取最新通知。感谢您的使用。
-      </p>
-    </section>
-    <section class="doc">
       <h3>常见问题（FAQ）</h3>
       <p class="small"><strong>问1：</strong>旧网站 mc.js.cool/mcjs.cc ?</p>
-      <p>mc.js.cool/mcjs.cc 是本站很久以前的旧网站，现已停止运营，且已完全迁移至本站 mcjs.link/syz71.github.io/mcjs.link
+      <p>mc.js.cool/mcjs.cc 是本站很久以前的旧网站，现已停止运营，且已完全迁移至本站 mcjs.link
         。为了您更好的体验，请将旧网站从收藏夹移除，或更换为本站 mcjs.link 。
-        旧网站主页可能会在部分地区被拦截，此时请使用 MCJS 的唯一官方网站 <a href="https://syz71.github.io/mcjs.link" style="color:var(--accent);">syz71.github.io/mcjs.link/mcjs.link</a> 。
+        旧网站主页可能会在部分地区被拦截，此时请使用 MCJS 的唯一官方网站 <a href="https://mcjs.link" style="color:var(--accent);">MCJS.Link</a> 。
         MCJS 的官方域名只有 mcjs.link ，以及一个 CDN 域名 144449.xyz 。建议不要从任何搜索引擎搜索 MCJS ，而是直接在浏览器地址栏输入
         mcjs.link（本站的网址简短好记请不要记错了），谨防搜索引擎给出的假冒网站结果。
       </p>
@@ -1090,7 +862,7 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
 
       <p class="small"><strong>问5：</strong>多人游戏联机问题</p>
       <p>MCJS 支持局域网联机和<strong>远程联机（MCJS 免费公益提供中转服务器）</strong>。
-        <br><strong>MCJS 中继服务器是国内最佳公益中继服务器，我们承诺永久免费，高可用性，只为给您最佳游戏体验。<br>MCJS
+        <br>优点：<strong>MCJS 中继服务器是国内最佳公益中继服务器，我们承诺永久免费，高可用性，只为给您最佳游戏体验。MCJS
           中继服务器在国内部署多个节点负载均衡，延迟和稳定性大幅优于其他中继服务器。</strong>
         <br>启用方法：将首选中继服务器设置为 wss://relay.mcjs.link 。<br>若您使用的是 MCJS 官方 1.8.8(WASM) 客户端，MCJS
         中继服务器已自带且默认是首选，无需改动。<br>若您使用的是其它客户端，则可能需要手动填写并设置，否则可能将无法联机。
@@ -1098,13 +870,13 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
         MCJS 保留了原作者提供的几个海外公益服务器，可作为备用选项，但也请不要滥用这些服务器。
       </p>
       <p class="small"><strong>问6：</strong>手机、平板等移动触屏设备支持</p>
-      <p>答：网页版 MC 是主要为电脑端设计的，<strong>有且只有 MCJS 官方 1.8.8
-          版本能在移动触屏设备上运行且适配触屏操作，对于其他版本、其他设备不提供任何支持和维护</strong>。推荐使用电脑浏览器体验 MCJS ，在电脑版上所有版本均提供支持。</p>
+      <p>网页版 MC 是主要为电脑端设计的，<strong>有且只有 1.8.8
+          版本和部分其他版本能在移动触屏设备上运行，对于其他版本其他设备不提供任何支持</strong>。如果您有电脑，请优先使用电脑而非移动设备，在电脑版上所有版本均提供支持。</p>
 
-      <p class="small"><strong>问7：</strong>新版本是否支持</p>
-      <p>近期有外国大佬成功攻破了新版本编译的技术，使得大于 1.12 的版本可以编译为 JS 版，MCJS 会第一时间同步更新，后续会继续更新更多版本。<br><strong>注：测试版不稳定且 bug 多，仅测试体验，如有
+      <p class="small"><strong>问7：</strong>更多新版本是否支持</p>
+      <p>MCJS 会第一时间同步更新原作者的更新，后续会继续更新更多版本。<br><strong>注：测试版不稳定且 bug 多，仅测试体验，如有
           bug 请勿反馈。高版本对设备性能要求高，故只有 WASM
-          版，需要高性能的电脑才能流畅运行，否则浏览器会时常崩溃。</strong></p>
+          版，需要高性能的电脑和支持 WASM 的新版 Chrome 浏览器才能流畅运行，否则游戏会出现崩溃。</strong></p>
 
       <p class="small"><strong>问8：</strong>离线游戏文件下载问题</p>
       <p>MCJS 不停的在更新版本，离线文件会很快过时。为了保证玩家都统一使用最新版本以提升联机兼容性，MCJS 暂不提供离线下载。</p>
@@ -1113,7 +885,7 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
       <a href="https://github.com/mcjsteam/discuss/issues" style="color:var(--accent);font-size: 18px;">点击前往 MCJS 官方
         Github issues</a>
       <p><strong>多看常见问题，多看往期 issues 回答，再提问！<br>
-          请勿重复提问常见问题，请勿重复提交与 MCJS 无关的内容。</strong>
+          请勿重复提问常见问题，请勿提交与 MCJS 无关的内容。</strong>
       </p>
       <p>提出其它问题、提交反馈、提供建议都可以直接发 issues 。<br>欢迎提交您的问题！我们会在 72 小时内回复。</p>
       <h3>联系我们/合作/推广</h3>
@@ -1155,7 +927,9 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
     <div class="modal-window">
       <h3>请选择访问线路</h3>
       <span>当前选择版本: </span><span id="version">version</span>
-      <p style="color: brown;text-align: left;">警告：我们的网站正不停的被人网络攻击，或是被恶意举报导致网络运营商拦截，所以<strong>任何一个镜像站都无法保证永远在线</strong>，请<strong>及时备份您的存档</strong>并在万一出现无法访问时切换至其它站点！若存档丢失请勿怪我们，而是去谴责那些恶意滥用公益项目的用户，谢谢您的配合。</p>
+      <p style="color: brown;text-align: left;">
+        警告：我们的网站正不停的被人网络攻击，或是被恶意举报导致网络运营商拦截，所以<strong>任何一个镜像站都无法保证永远在线</strong>，请<strong>及时备份您的存档</strong>并在万一出现无法访问时切换至其它站点！若存档丢失请勿怪我们，而是去谴责那些恶意滥用公益项目的用户，谢谢您的配合。
+      </p>
       <div>
         <a class="btnb" target="_blank" id="m11">镜像站 11</a>
         <a class="btnb" target="_blank" id="m12">镜像站 12</a>
@@ -1165,7 +939,8 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
         <a class="btnb" target="_blank" id="m16">镜像站 16</a>
         <a class="btnb" target="_blank" id="m17">镜像站 17</a>
       </div>
-      <p style="color: dimgray;text-align: left;">监测到旧的镜像站 1,2,5,6 在部分地区已不可用，这些旧镜像站将在出现拦截情况后被优先关闭，为了长期使用<strong>建议切换至镜像站 11-17 </strong></p>
+      <p style="color: dimgray;text-align: left;">监测到旧的镜像站 1,2,5,6 在部分地区已不可用，这些旧镜像站将在出现拦截情况后被优先关闭，为了长期使用<strong>建议切换至镜像站
+          11-17 </strong></p>
       <div>
         <a class="btnb" target="_blank" id="m0" style="background-color: darkgray;display: none;">旧主站 0</a>
         <a class="btnb" target="_blank" id="m1">镜像站 1</a>
@@ -1199,7 +974,6 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
     var userLang = navigator.language || navigator.userLanguage;
     userLang = userLang.toLowerCase();
     if (userLang !== 'zh-cn' && !userLang.includes('zh-hans')) window.alert("WARNING\nThis website is only accessible in Simplified Chinese environments.");
-    const bg = document.getElementById('bg');
     const modal = document.getElementById('myModal');
     const modal2 = document.getElementById('myModal2');
     const version = document.getElementById('version');
@@ -1220,8 +994,6 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
     const m17 = document.getElementById('m17');
     const mm1 = document.getElementById('mm1');
     const mm2 = document.getElementById('mm2');
-    // const mm3 = document.getElementById('mm3');
-    // const mm4 = document.getElementById('mm4');
     const mm = document.getElementById('mm');
     function openModal(ver) {
       version.innerText = ver;
@@ -1250,25 +1022,15 @@ We are not affiliated with Minecraft, Mojang, or Microsoft. This website is for 
         closeModal2();
       }
     }
-    function openModal2(ver) {
+    function openModal2(ver, ver2) {
       version2.innerText = ver;
       mm1.href = 'https://mcjs.144449.xyz/' + ver;
       mm2.href = 'https://mcjs-beta.144449.xyz/' + ver;
-      // mm3.href = 'https://mcjs.144449.xyz/' + ver;
-      // mm4.href = 'https://mcjs.144449.xyz/' + ver;
-      mm.href = 'https://mcjs-r2.pages.dev/assets/' + ver;
+      mm.href = ver2;
       modal2.style.display = 'flex';
     }
     function closeModal2() {
       modal2.style.display = 'none';
-    }
-    function changebg() {
-      if (bg.style.display != 'none') {
-        bg.style.display = 'none';
-      }
-      else {
-        bg.style.display = 'block';
-      }
     }
   </script>
 <!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4f597a443bd0488bada346ee8cc67e7d"}'></script><!-- Cloudflare Pages Analytics --></body>
